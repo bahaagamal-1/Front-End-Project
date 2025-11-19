@@ -1,0 +1,57 @@
+ li.active a{
+    color: #FF324D;
+}
+
+
+.cart{
+    position: relative;
+}
+
+.cart span{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #FF324D;
+    color: white;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+.menu{
+    display: none;
+}
+
+@media (max-width:1100px){
+    .links {
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        background-color: white;
+        z-index: 1000;
+        height: 0;
+        overflow: hidden;
+        transition: 0.5s;
+    }
+    .links.active{
+        height: 264px;
+    }
+    .links ul{
+        display: block;
+        padding: 10px;
+    }
+    .links li:not(:last-child){
+        margin-bottom: 20px;
+    }
+    .menu{
+    display: inline-block;
+}
+}
+
+.logout{
+    background-color: transparent;
+    font-size: 18px;
+}

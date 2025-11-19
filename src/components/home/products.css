@@ -1,0 +1,340 @@
+.productsContain{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 20px;
+}
+
+.productsContain .box img{
+    width: 200px;
+    height: 100%;
+}
+.productsContain .box{
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    display: grid;
+    grid-template-rows: 250px 60px 20px 20px;
+    row-gap: 10px;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.productsContain .box h4{
+    font-size: 14px;
+    color: #292b2c;
+}
+.productsContain .box span{
+    color: #FF324D;
+    font-size: 18px;
+    font-weight: bold;
+}
+.productsContain .box .stars{
+    display: flex;
+    gap: 2px;
+}
+.productsContain .box .stars i {
+    color: #F6BC3E;
+    font-size: 12px;
+}
+.details{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 1s;
+    opacity: 0;
+    visibility: hidden;
+}
+.productsContain .box:hover .details{
+    opacity: 1;
+    visibility: visible;
+}
+.productsContain .box:hover .details .icons .icon{
+    top: 0;
+}
+.productsContain .box:hover .btn-addtocart{
+    top: 0;
+}
+.details .icons{
+    height: 272px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.details .icons .icon i {
+    font-size: 18px;
+}
+.details .icons .icon{
+    position: relative;
+    top: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    background-color: white;
+    cursor: pointer;
+    transition: top  0.3s;
+}
+.details .icons .icon:nth-child(1){
+    transition-delay:  0;
+}
+.details .icons .icon:nth-child(2){
+    transition-delay: 0.2s;
+}
+.details .icons .icon:nth-child(3){
+    transition-delay:  0.3s;
+}
+.details .icons .icon:hover{
+    background-color: #FF324D;
+}
+.details .icons .icon:hover i{
+    color: white;
+}
+.btn-addtocart{
+    position: relative;
+    top: 20px;
+    font-size: 18px;
+    border: 1px solid #FF324D;
+    padding: 10px 0;
+    border-radius: 30px;
+    margin: 0 20px 20px ;
+    color: white;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+    z-index: 11111;
+    transition: top 0.5s;
+    transition-delay: 0.2s;
+}
+.btn-addtocart:hover{
+    color: #FF324D;
+}
+.btn-addtocart::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 51%;
+    height: 150%;
+    background-color: #FF324D;
+    z-index: -1;
+    transition: 0.8s;
+}
+.btn-addtocart::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 51%;
+    height: 150%;
+    background-color: #FF324D;
+    z-index: -1;
+    transition: 0.8s;
+}
+.btn-addtocart:hover.btn-addtocart::before{
+    right: -100%;
+}
+.btn-addtocart:hover.btn-addtocart::after{
+    left: -100%;
+}
+
+
+.banner2{
+    padding: 80px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.bannerDetailsOne{
+    width: 40.5%;
+    position: relative;
+    overflow: hidden;
+}
+.bannerDetailsOne:hover img{
+    scale: 1.06;
+}
+.bannerDetailsOne img{
+    width: 100%;
+    transition: 0.3s;
+}
+.bannerDetailsTwo{
+    width: 57.5%;
+    position: relative;
+    overflow: hidden;
+   
+}
+.bannerDetailsTwo:hover img{
+    scale: 1.06;
+}
+.bannerDetailsTwo img{
+    width: 100%;
+    transition: 0.3s;
+}
+
+.textDetails{
+    position: absolute;
+    top: 35px;
+    left: 30px;
+}
+.textDetails span{
+    display: block;
+    font-size: 20px;
+    color: #292b2c;
+}
+.textDetails h4{
+    font-size: 32px;
+    color: #292b2c;
+}
+.bannerDetailsTwo .textDetails{
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+}
+.banner2 a{
+    position: relative;
+    transition: 0.3s;
+}
+.banner2 a::after{
+    content: '';
+    position: absolute;
+    top: 65%;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #ff324d43;
+}
+.banner2 a:hover{
+    color: #FF324D;
+}
+.custom{
+    position: relative;
+}
+.left{
+    position: absolute;
+    top: 90px ;
+    left: 0;
+    cursor: pointer;
+    font-size: 30px;
+}
+.right{
+    position: absolute;
+    top: 90px ;
+    right: 0;
+    cursor: pointer;
+     font-size: 30px;
+}
+.slider3 {
+    margin: 90px 0;
+    position: relative;
+}
+.slider3 img{
+    width: 300px;
+    height: 250px;
+}
+.slide-img{
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+.slide-img .style{
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: 0.3s;
+}
+.slide-img:hover .style{
+    opacity: 1;
+}
+.slide-img img{
+    transition: 1s;
+}
+.slide-img:hover img{
+    scale: 1.15;
+}
+
+.slider3 .instagram{
+    text-align: center;
+    padding: 20px;
+    width: 400px;
+    min-height: 50px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: 10000;
+    border-radius: 50px;
+}
+.slider3 .instagram h5{
+    font-size: 28px;
+    font-weight: 500;
+    color: #292b2c;
+}
+.slider3 .instagram span{
+    font-size: 16px;
+    color: #687188;
+}
+
+
+.slide-img2 img{
+    opacity: 0.7;
+    transition: all 0.5s ease-in-out;
+}
+
+.slide-img2:hover img{
+    opacity: 1;
+}
+.slider4{
+    margin-bottom: 80px;
+}
+
+ @media (max-width:950px){
+    .productsContain .box img{
+        width: 150px;
+        height: 80%;
+    }
+}
+
+@media (max-width:1100px){
+    .banner2{
+        flex-wrap: wrap;
+        row-gap: 10px;
+    }
+    .banner2 .bannerDetailsOne{
+        width: 100%;
+    }
+    .banner2 .bannerDetailsTwo{
+        width: 100%;
+    }
+}
+@media (max-width:560px){
+
+  .banner2 .textDetails h4{
+    font-size: 25px;
+  }
+  .slider3 .instagram{
+    width: 300px;
+    padding: 10px;
+  }
+
+}
+@media (max-width:450px){
+  .banner2 .textDetails span{
+    font-size: 14px;
+  }
+  .banner2 .textDetails h4{
+    font-size: 18px;
+  }
+}
+

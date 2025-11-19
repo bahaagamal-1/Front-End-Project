@@ -1,0 +1,97 @@
+
+
+.productDetails{
+    text-align: center
+}
+.productDetails .box{
+    padding: 50px 20px;
+}
+.productDetails .box img{
+    width: 300px;
+    margin-bottom: 20px;
+}
+.productDetails .box h4{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.productDetails .box p{
+    font-size: 16px;
+    margin: 0 auto 10px;
+    max-width: 700px;
+}
+.productDetails .box span:nth-child(4){
+    color: #FF324D;
+    font-size: 25px;
+    font-weight: 500;
+}
+.productDetails .box span{
+    display: block;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.productDetails .box span i{
+    color: gold;
+}
+.productDetails .box button{
+    position: relative;
+    border: 1px solid #FF324D;
+    outline:none;
+    padding: 10px 30px;
+    font-size: 18px;
+    color: #FF324D;
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: transparent;
+    z-index: 10000;
+}
+.productDetails .box button::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -30px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #FF324D;
+    transition: 0.5s;
+    z-index: -1;
+}
+.productDetails .box button::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -30px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #FF324D;
+    transition: 0.5s;
+    z-index: -1;
+}
+.productDetails .box button:hover.btnDetails::after{
+    left: 20px;
+    width: 100%;
+    height: 150%;
+}
+.productDetails .box button:hover.btnDetails::before{
+    right: 20px;
+    width: 100%;
+    height: 150%;
+}
+.productDetails .box button:hover{
+    color: white;
+}
+
+@media(max-width:550px){
+    .productDetails .box img{
+        width: 250px;
+    }
+    .productDetails .box h4{
+        font-size: 20px;
+    }
+    .productDetails .box p{
+        font-size: 14px;
+    }
+}

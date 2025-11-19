@@ -1,0 +1,172 @@
+
+.form-container{
+    padding: 70px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.form-container .login{
+    width: 515px;
+    padding: 43px;
+    box-shadow:  0 0 10px rgb(0, 0, 0,0.2);
+}
+.form-container .login h2{
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+.form-container .login input{
+    width: 100%;
+    height: 50px;
+    padding: 8px 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+.form-container .login input::placeholder{
+    font-size: 18px;
+}
+.form-container .remember{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.form-container .remember .check{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.form-container .remember .check input{
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    margin: 0;
+}
+.form-container .remember .check label{
+    cursor: pointer;
+    color: #687188;
+    text-transform: lowercase;
+}
+.form-container .remember a{
+    color: #687188;
+}
+.login .submit{
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid #FF324D;
+    font-size: 18px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1111;
+    color: white;
+    margin-bottom: 15px;
+    background-color: transparent;
+}
+
+.submit::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 51%;
+    height: 110%;
+    background-color: #FF324D;
+    z-index: -1;
+    transition: 0.8s;
+}
+.submit::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 51%;
+    height: 110%;
+    background-color: #FF324D;
+    z-index: -1;
+    transition: 0.8s;
+}
+.submit:hover.submit::after{
+    left: -100%;
+}
+.submit:hover.submit::before{
+    right: -100%;
+}
+.submit:hover{
+    color: #FF324D;
+    
+}
+.login .or{
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: #687188;
+}
+.loginWithSocial{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    gap: 15px;
+}
+.loginWithSocial a {
+    padding: 10px 20px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    border-radius: 8px;
+}
+.loginWithSocial a:nth-child(1){
+    background-color: #3b5998;
+    color: white;
+}
+.loginWithSocial a:nth-child(2){
+    background-color: #d85040;
+    color: white;
+}
+
+.login p {
+    text-align: center;
+}
+.login p span{
+    color: #687188;
+    text-transform: lowercase;
+}
+@media (max-width:550px){
+    .form-container .login{
+        width: 100%;
+        padding: 20px;
+    }
+    .form-container .login h2{
+        font-size: 20px;
+    }
+    .form-container .login input::placeholder{
+        font-size: 14px;
+    }
+    .form-container .login input{
+        height: 40px;
+    }
+    .form-container{
+        padding: 50px 15px;
+    }
+    .form-container .remember .check label{
+        font-size: 13px;
+    }
+    .form-container .remember a{
+        font-size: 13px;
+    }
+    .login .submit{
+        height: 40px;
+        font-size: 16px;
+    }
+    .loginWithSocial a{
+        padding: 10px;
+        font-size: 14px;
+    }
+    .login p{
+        font-size: 14px;
+    }
+}
